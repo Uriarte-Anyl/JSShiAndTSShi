@@ -49,11 +49,11 @@ function calculateFare({
   passengerAge,
   hasPromoCode,
 }: FareParams): number {
+  let fare = 2.5 + 1.2 * distanceKm;
+
   if (passengerAge < 5) {
     return 0;
   }
-
-  let fare = 2.5 + 1.2 * distanceKm;
 
   if (isPeakHour) {
     fare *= 1.5;
