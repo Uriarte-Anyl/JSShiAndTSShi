@@ -1,16 +1,9 @@
-// Sum of Valid Daily Sales
 function calculateTotalSales(dailySales: number[]): number {
-  let positiveNums = [];
   let total = 0;
   for (let i = 0; i < dailySales.length; i++) {
     if (dailySales[i] >= 0) {
-      positiveNums.push(dailySales[i]);
+      total += dailySales[i];
     }
   }
-
-  for (let i = 0; i < positiveNums.length; i++) {
-    total += positiveNums[i];
-  }
-
   return total;
 }
